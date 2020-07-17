@@ -1,0 +1,66 @@
+.container {
+  text-align: center;
+}
+.header {
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.App-header {
+  background-color: #51a94b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+}
+.username {
+  background-color: white;
+  margin-bottom: 2px;
+  border-radius: 5px;
+  text-align: left;
+  flex-direction: row;
+}
+.check {
+  margin-top: 15px;
+  text-align: left;
+  flex-direction: row;
+}
+.forget {
+  margin-top: -20px;
+  text-align: right;
+}
+.label {
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 50px;
+
+  /* height: 25%; */
+}
+.input {
+  margin-left: 15px;
+}
+.form-control:focus {
+  outline: none;
+  outline-width: 0;
+}
+
+.form-control::-moz-placeholder {
+  color: "#787878";
+  font-weight: bold;
+}
+.form-control {
+  border-color: white;
+  height: 50px;
+  width: 70%;
+
+  /* margin-bottom: 15px; */
+}
+
+.button {
+  height: 50px;
+  width: 150px;
+  color: #51a94b;
+  font-size: 20px;
+}

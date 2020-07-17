@@ -1,0 +1,70 @@
+.card {
+  /* align-items: "center"; */
+  /* justify-content: "center"; */
+  width: 300px;
+  height: 350px;
+  /* padding: 100px; */
+  /* border: 1px solid red; */
+  text-align: left;
+  margin-top: 15px;
+  box-shadow: 5px 10px;
+  color: rgb(184, 184, 184);
+  margin: 15px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+    margin-left: 25px;
+    /* border: 3px solid black;
+    margin-top: 80px;
+    margin-right: 25px; */
+  }
+}
+
+.home {
+  margin-left: 180px;
+  border: 3px solid black;
+  margin-top: 80px;
+  margin-right: 25px;
+}
+.imageCard {
+  background-color: "#eee";
+  border-radius: 10px;
+  overflow: "hidden";
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.lastName {
+  font-weight: bold;
+  text-align: left;
+  color: black;
+  width: 240px;
+}
+.firstName {
+  text-align: left;
+  color: black;
+  width: 240px;
+  font-weight: normal;
+}
+.nameBorder {
+  background-color: rgb(184, 184, 184);
+  width: 279px;
+  height: 30px;
+  padding: 10px;
+  /* border: 1px solid red; */
+  flex-direction: row;
+}
+.icon {
+  margin-left: 250px;
+}
+
+.department {
+  text-align: left;
+  font-weight: bold;
+  font-size: large;
+  color: rgb(71, 71, 138);
+  margin: 15px;
+}

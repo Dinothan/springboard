@@ -1,0 +1,90 @@
+.container {
+  text-align: center;
+  margin-top: -20px;
+  margin-left: 180px;
+  margin-right: 25px;
+}
+.header {
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-top: 100px;
+}
+.h2{
+  margin-top: 150px;
+}
+/* 
+  .App-header {
+    background-color: #51a94b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+  } */
+.username {
+  background-color: white;
+  margin-bottom: 18px;
+  border-radius: 5px;
+  text-align: left;
+  flex-direction: row;
+}
+.check {
+  margin-top: 15px;
+  text-align: left;
+  flex-direction: row;
+}
+.forget {
+  margin-top: -20px;
+  text-align: right;
+}
+.label {
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 50px;
+
+  /* height: 25%; */
+}
+.input {
+  margin-left: 15px;
+}
+.form-control:focus {
+  outline: none;
+  outline-width: 0;
+}
+
+.form-control::-moz-placeholder {
+  color: "#787878";
+  font-weight: bold;
+}
+.form-control {
+  border-color: white;
+  height: 50px;
+  width: 40%;
+
+  /* margin-bottom: 15px; */
+}
+
+.createbutton {
+  height: 50px;
+  width: 150px;
+  background-color: #51a94b;
+  color: white;
+  font-size: 20px;
+}
+.userRole {
+  text-align: left;
+  margin-left: 65px;
+  margin-top: 50px;
+  width: 100%;
+}
+.content {
+  
+  display: flex;
+  flex-direction: row;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+}

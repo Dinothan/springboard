@@ -1,0 +1,125 @@
+/* nav  */
+
+.topnav {
+  overflow: hidden;
+  background-color: #51a94b;
+  z-index: 1; /* Stay on top */
+  top: 0;
+  position: fixed;
+  width: 100%;
+  flex-direction: row;
+  height: 60px;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196f3;
+  color: white;
+}
+
+.topnav input[type="text"] {
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+/* @media screen and (max-width: 600px) {
+  .topnav a,
+  .topnav input[type="text"] {
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+    justify-content: center;
+    align-items: center;
+  }
+  .topnav input[type="text"] {
+    border: 1px solid #ccc;
+  }
+} */
+/* nav   */
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 1;
+  left: 0;
+  overflow-x: hidden;
+  margin-top: 60px;
+  padding-top: 100px;
+  background-color: #e9e9e9;
+  border-top-right-radius: 150px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #383636;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px;
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sidenav {
+    height: 0;
+    width: 0;
+  }
+}
+.search {
+  justify-content: center;
+  align-items: center;
+}
+.sideText {
+  text-align: left;
+}
+.menu {
+  text-align: left;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+.bell {
+  text-align: left;
+  margin-left: 1000px;
+  margin-top: -50px;
+  flex-direction: row;
+  color: white;
+}
