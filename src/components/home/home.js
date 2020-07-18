@@ -47,14 +47,16 @@ class Home extends Component {
     return (
       <div className="card">
         <div className="nameBorder">
-          <div className="firstName">{firstName}</div>
-          <div className="lastName">{lastName}</div>
+          <div>
+            <div className="firstName">{firstName}</div>
+            <div className="lastName">{lastName}</div>
+          </div>
           <div className="icon">
             <a onClick={() => this.deleteUser(firstName)}>
               <FontAwesomeIcon
                 icon={faTrash}
                 style={{
-                  color: "black",
+                  color: "gray",
                   // marginLeft: 250,
                   // marginRight: 25,
                 }}

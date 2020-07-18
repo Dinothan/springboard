@@ -27,10 +27,10 @@ class Login extends Component {
         <div className="container">
           <header>
             <h2>Welcome to Springboard</h2>
-            <div className="header"> Please Login to continue</div>
+            <div className="header1"> Please Login to continue</div>
           </header>
           <div className="label">
-            <div className="username">
+            <div className="username1">
               <FontAwesomeIcon
                 icon={faUser}
                 style={{
@@ -43,13 +43,13 @@ class Login extends Component {
               <input
                 type="text"
                 placeholder="Username"
-                className="form-control"
+                className="form-control1"
                 name="uname"
                 value={this.state.email}
                 required
               />
             </div>
-            <div className="username">
+            <div className="username1">
               <FontAwesomeIcon
                 icon={faLock}
                 style={{
@@ -63,7 +63,7 @@ class Login extends Component {
                 type="password"
                 placeholder="Password"
                 name="psw"
-                className="form-control"
+                className="form-control1"
                 value={this.state.password}
                 required
               />

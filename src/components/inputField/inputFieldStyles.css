@@ -1,0 +1,48 @@
+.username {
+  background-color: white;
+  margin-bottom: 18px;
+  border-radius: 5px;
+  text-align: left;
+  flex-direction: row;
+  box-shadow: 0px 3px;
+  color: rgb(206, 203, 203);
+  margin-left: 70px;
+  margin-left: 70px;
+  width: 400px;
+}
+
+.form-control:focus {
+  outline: none;
+  outline-width: 0;
+}
+
+.form-control::-moz-placeholder {
+  color: "#787878";
+  font-weight: bold;
+}
+
+.form-control {
+  border-color: white;
+  height: 50px;
+  width: 300px;
+  border: 0;
+  /* margin-bottom: 15px; */
+}
+
+.inputField {
+  display: flex;
+  flex-direction: row;
+}
+
+.input {
+  margin-left: 15px;
+}
+@media screen and (max-width: 600px) {
+    .form-control {
+        border-color: white;
+        height: 50px;
+        width: 200px;
+        border: 0;
+        /* margin-bottom: 15px; */
+      }
+  }

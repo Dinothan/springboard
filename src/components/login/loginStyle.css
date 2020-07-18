@@ -1,10 +1,11 @@
 .container {
   text-align: center;
 }
-.header {
+.header1 {
   align-items: center;
   justify-content: center;
   font-size: 18px;
+  color: white;
 }
 
 .App-header {
@@ -15,7 +16,7 @@
   color: white;
   justify-content: center;
 }
-.username {
+.username1 {
   background-color: white;
   margin-bottom: 2px;
   border-radius: 5px;
@@ -41,20 +42,19 @@
 .input {
   margin-left: 15px;
 }
-.form-control:focus {
+.form-control1:focus {
   outline: none;
   outline-width: 0;
 }
 
-.form-control::-moz-placeholder {
+.form-control1::-moz-placeholder {
   color: "#787878";
   font-weight: bold;
 }
-.form-control {
+.form-control1 {
   border-color: white;
   height: 50px;
   width: 70%;
-
   /* margin-bottom: 15px; */
 }
 

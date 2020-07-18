@@ -40,25 +40,28 @@
 .lastName {
   font-weight: bold;
   text-align: left;
-  color: black;
+  color: rgb(109, 106, 106);
   width: 240px;
 }
 .firstName {
   text-align: left;
-  color: black;
+  color: rgb(109, 106, 106);
   width: 240px;
   font-weight: normal;
 }
 .nameBorder {
-  background-color: rgb(184, 184, 184);
+  background-color: rgb(224, 220, 220);
   width: 279px;
   height: 30px;
   padding: 10px;
   /* border: 1px solid red; */
+  display: flex;
   flex-direction: row;
 }
 .icon {
-  margin-left: 250px;
+  margin-left: 15px;
+  margin-top: 5px;
+  color: rgb(161, 159, 159);
 }
 
 .department {

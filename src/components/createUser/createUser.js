@@ -10,6 +10,8 @@ import {
 import * as actions from "../../store/actions/index";
 import styles from "./createStyles";
 import "./createUserStyles.css";
+import InputField from "../inputField/inputField";
+import PickerField from "../inputField/pickerField";
 
 class CreateUser extends Component {
   constructor(props) {
@@ -103,6 +105,22 @@ class CreateUser extends Component {
     }
   };
 
+  roles = (role) => {
+    return (
+      <a onClick={() => this.remove(role)}>
+        <FontAwesomeIcon
+          icon={faTimes}
+          style={{
+            color: "gray",
+            justifyContent: "center",
+            marginLeft: 25,
+            marginRight: 25,
+          }}
+        />
+      </a>
+    );
+  };
+
   render() {
     return (
       <div className="container">
@@ -113,121 +131,54 @@ class CreateUser extends Component {
           <div className="header"> Add users into springboard plateform</div>
         </header>
         <div className="label">
-          <div className="username">
-            <FontAwesomeIcon
-              icon={faUser}
-              style={{
-                color: "gray",
-                justifyContent: "center",
-                marginLeft: 25,
-                marginRight: 25,
-              }}
-            />
-            <input
-              type="text"
-              placeholder="First Name"
-              className="form-control"
-              name="uname"
+          <div className="inputField">
+            <InputField
+              name={"First Name"}
               onChange={this.onChangeFirstName}
               value={this.state.firstName}
-              required
-            />
-            <FontAwesomeIcon
+              type={"text"}
               icon={faUser}
-              style={{
-                color: "gray",
-                justifyContent: "center",
-                marginLeft: 25,
-                marginRight: 25,
-              }}
             />
-            <input
-              type="text"
-              placeholder="Last Name"
-              className="form-control"
-              name="uname"
+            <InputField
+              name={"Last Name"}
               onChange={this.onChangeLastName}
               value={this.state.lastName}
-              required
+              type={"text"}
+              icon={faUser}
             />
           </div>
-          <div className="username">
-            <FontAwesomeIcon
-              icon={faEnvelope}
-              style={{
-                color: "gray",
-                justifyContent: "center",
-                marginLeft: 23,
-                marginRight: 25,
-              }}
-            />
-            <input
-              type="email"
-              placeholder="Email Address"
-              name="email"
-              className="form-control"
+
+          <div className="inputField">
+            <InputField
+              name={"Email Address"}
               onChange={this.onChangeEmail}
               value={this.state.email}
-              required
+              type={"email"}
+              icon={faEnvelope}
             />
-            <FontAwesomeIcon
-              icon={faUsers}
-              style={{
-                color: "gray",
-                justifyContent: "center",
-                marginLeft: 19,
-                marginRight: 25,
-              }}
-            />
-
-            <select
-              name="departments"
-              id="departments"
+            <PickerField
               onChange={this.onChangeDept}
               value={this.state.department}
-              className="form-control"
-              required
-            >
-              <option value="IT">IT</option>
-              <option value="Finance">Finance</option>
-              <option value="HR">HR</option>
-              <option value="Marketing">Marketing</option>
-              <option value="Other">Other</option>
-            </select>
+            />
           </div>
-          {/* <button type="submit">Login</button> */}
-          <div className="content">
-            <div className="box">A</div>
-            <div className="box">B</div>
-            <div className="box">C</div>
-          </div>
+
           <div className="userRole">
             <div>User Roles : </div>
             <div style={styles.listEmailScrollWrap}>
-              {this.state.roleArray.map((res, index) => (
-                <div style={styles.listEmailSingle} className="content">
-                  <div style={styles.textPrimeSm}>{res.role}</div>
-
-                  <button onClick={() => this.remove(res.role)}>
-                    <FontAwesomeIcon
-                      icon={faTimes}
-                      style={{
-                        color: "gray",
-                        justifyContent: "center",
-                        marginLeft: 25,
-                        marginRight: 25,
-                      }}
-                    />
-                  </button>
-                </div>
-              ))}
-
-              <div style={styles.textFieldEmailView}>
+              <div className="content">
+                {this.state.roleArray.map((res, index) => (
+                  <div className="content1">
+                    <div style={styles.textPrimeSm}>{res.role}</div>
+                    {this.roles(res.role)}
+                  </div>
+                ))}
+              </div>
+              <div className="roles">
                 <input
                   type="text"
-                  placeholder="User Roles"
+                  // placeholder="User Roles"
                   name="psw"
-                  className="form-control"
+                  className="form-control2"
                   value={this.state.role}
                   onChange={this.onChangeEmailText}
                   onKeyPress={this.onKeyPress}

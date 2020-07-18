@@ -15,6 +15,9 @@ import {
   faSignOutAlt,
   faFileAlt,
   faBell,
+  faBars,
+  faSearch,
+  faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
 
 class Navigation extends Component {
@@ -26,10 +29,15 @@ class Navigation extends Component {
         ? this.props.isAuthenticated.users.length
         : 0,
     };
+    window.addEventListener("resize", this.update);
+  }
+
+  componentDidMount() {
+    this.update();
   }
 
   UNSAFE_componentWillReceiveProps = (nextProps) => {
-    const {isAuthenticated} = nextProps
+    const { isAuthenticated } = nextProps;
     this.setState({ count: isAuthenticated.users.length });
   };
 
@@ -38,7 +46,23 @@ class Navigation extends Component {
     this.setState({ showing: !showing });
   };
 
+  update = () => {
+    this.setState(
+      {
+        width: window.innerWidth,
+      },
+      () => {
+        if (this.state.width < 600) {
+          this.setState({ showing: false });
+        } else {
+          this.setState({ showing: true });
+        }
+      }
+    );
+  };
+
   render() {
+    console.log(window.innerWidth);
     const { showing, count } = this.state;
     const Badge = ({ count }) => (
       <div
@@ -59,9 +83,9 @@ class Navigation extends Component {
           <div className="menu">
             <a onClick={this.menuClick}>
               <FontAwesomeIcon
-                icon={faFileAlt}
+                icon={faBars}
                 style={{
-                  color: "black",
+                  color: "white",
                   fontSize: 25,
                   // marginLeft: 250,
                   // marginRight: 25,
@@ -71,11 +95,8 @@ class Navigation extends Component {
           </div>
           <div className="search">
             <input type="text" placeholder="Search.." />
-          </div>
-          <div className="bell">
-            <Badge count={count} />
             <FontAwesomeIcon
-              icon={faBell}
+              icon={faSearch}
               style={{
                 color: "white",
                 // marginTop: -15
@@ -83,7 +104,42 @@ class Navigation extends Component {
                 // marginRight: 25,
               }}
             />
-            <div>John Wick</div>
+          </div>
+          <div className="bell">
+            <div>
+              <Badge count={count} />
+              <FontAwesomeIcon
+                icon={faBell}
+                style={{
+                  color: "white",
+                  // marginTop: -15
+                  // marginLeft: 250,
+                  // marginRight: 25,
+                }}
+              />
+            </div>
+            <div
+              style={{
+                marginTop: 12,
+                fontWeight: "bold",
+                flexDirection: "row",
+                display: "flex",
+              }}
+            >
+              <div style={{ marginTop: 5, marginLeft: 5, marginRight: 8 }}>
+                John Wick
+              </div>
+              <div className="circle"></div>
+              <FontAwesomeIcon
+                icon={faCaretDown}
+                style={{
+                  color: "white",
+                  marginTop: 5,
+                  marginLeft: 15,
+                  // marginRight: 25,
+                }}
+              />
+            </div>
           </div>
         </div>
         {showing ? (
@@ -97,7 +153,7 @@ class Navigation extends Component {
                     // marginLeft: 250,
                     marginRight: 25,
                   }}
-                />{" "}
+                />
                 Home
               </Link>
             </div>

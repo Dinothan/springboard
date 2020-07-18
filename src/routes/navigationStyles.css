@@ -99,14 +99,22 @@
 }
 
 @media screen and (max-width: 600px) {
-  .sidenav {
+  /* .sidenav {
     height: 0;
     width: 0;
+  } */
+  .search {
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin-left: 80px;
   }
 }
 .search {
   justify-content: center;
   align-items: center;
+  width: 400px;
+  margin-left: 500px;
 }
 .sideText {
   text-align: left;
@@ -117,9 +125,16 @@
   margin-left: 20px;
 }
 .bell {
+  display: flex;
   text-align: left;
-  margin-left: 1000px;
+  margin-left: 1200px;
   margin-top: -50px;
   flex-direction: row;
   color: white;
+}
+.circle {
+  border-radius: 25px;
+  border: 2px solid white;
+  width: 30px;
+  height: 30px;
 }
