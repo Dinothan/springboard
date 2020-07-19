@@ -10,14 +10,20 @@ import "./inputFieldStyles.css";
 
 const inputField = (props) => {
   return (
-    <div className="username">
+    // <div className="username">
+    <div className="fieldItemWrapper">
+    <div className="fieldItem">
       <FontAwesomeIcon
         icon={faUsers}
         style={{
           color: "gray",
-          justifyContent: "center",
-          marginLeft: 25,
-          marginRight: 25,
+          position: 'absolute',
+          zIndex: 999,
+          left: 0,
+          top: 0,
+          bottom: 0,
+          height: '100%',
+          paddingLeft: 15
         }}
       />
 
@@ -26,15 +32,18 @@ const inputField = (props) => {
         id="departments"
         onChange={props.onChange}
         value={props.value}
-        className="form-control"
+        // className="form-control"
+        className = "inputWrapper fieldBg selectWrapper"
         required
       >
         <option value="IT">IT</option>
         <option value="Finance">Finance</option>
         <option value="HR">HR</option>
         <option value="Marketing">Marketing</option>
-        <option value="Other">Other</option>
+        <option value="other">other</option>
       </select>
+    {/* // </div> */}
+    </div>
     </div>
   );
 };

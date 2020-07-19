@@ -71,74 +71,92 @@ class Navigation extends Component {
           height: 16,
           borderRadius: 8, //half radius will make it cirlce,
           backgroundColor: "red",
-          marginLeft: 7,
+          marginLeft: 0,
+          position: "absolute",
+          top: 10,
+          left: 7,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        <div style={{ color: "#FFF", textAlign: "center" }}>{count}</div>
+        <div
+          style={{
+            color: "#FFF",
+            textAlign: "center",
+            marginTop: -2,
+            fontSize: 12,
+            fontWeight: "bold",
+          }}
+        >
+          {count}
+        </div>
       </div>
     );
     return (
-      <div>
+      // <div>
+      <React.Fragment>
         <div className="topnav">
-          <div className="menu">
-            <a onClick={this.menuClick}>
-              <FontAwesomeIcon
-                icon={faBars}
-                style={{
-                  color: "white",
-                  fontSize: 25,
-                  // marginLeft: 250,
-                  // marginRight: 25,
-                }}
-              />
-            </a>
-          </div>
-          <div className="search">
-            <input type="text" placeholder="Search.." />
-            <FontAwesomeIcon
-              icon={faSearch}
-              style={{
-                color: "white",
-                // marginTop: -15
-                // marginLeft: 250,
-                // marginRight: 25,
-              }}
-            />
-          </div>
-          <div className="bell">
-            <div>
-              <Badge count={count} />
-              <FontAwesomeIcon
-                icon={faBell}
-                style={{
-                  color: "white",
-                  // marginTop: -15
-                  // marginLeft: 250,
-                  // marginRight: 25,
-                }}
-              />
+          <div className="topnavBar">
+            <div className="menuBar">
+              <a onClick={this.menuClick}>
+                <FontAwesomeIcon
+                  icon={faBars}
+                  style={{
+                    color: "white",
+                    fontSize: 25,
+                  }}
+                />
+              </a>
             </div>
-            <div
-              style={{
-                marginTop: 12,
-                fontWeight: "bold",
-                flexDirection: "row",
-                display: "flex",
-              }}
-            >
-              <div style={{ marginTop: 5, marginLeft: 5, marginRight: 8 }}>
-                John Wick
+            <div className="searchBar">
+              <div className="searchWrapper">
+                <input
+                  type="text"
+                  className="searchField"
+                  placeholder="Search.."
+                />
+                <div className="searchIcon">
+                  <div className="searchIconSm">
+                    <FontAwesomeIcon
+                      icon={faSearch}
+                      style={{
+                        color: "white",
+                      }}
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="circle"></div>
-              <FontAwesomeIcon
-                icon={faCaretDown}
+            </div>
+            <div className="bellBar">
+              <div className="bellIcon">
+                <Badge count={count} />
+                <FontAwesomeIcon
+                  icon={faBell}
+                  style={{
+                    color: "white",
+                  }}
+                />
+              </div>
+              <div
                 style={{
-                  color: "white",
-                  marginTop: 5,
-                  marginLeft: 15,
-                  // marginRight: 25,
+                  fontWeight: "bold",
+                  flexDirection: "row",
+                  display: "flex",
+                  alignItems: "center",
                 }}
-              />
+              >
+                <div className="nameWrapper">John Wick</div>
+                <div className="circle"></div>
+                <FontAwesomeIcon
+                  icon={faCaretDown}
+                  style={{
+                    color: "white",
+                    marginTop: 5,
+                    marginLeft: 15,
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -190,7 +208,11 @@ class Navigation extends Component {
             </div>
           </div>
         ) : null}
-      </div>
+        <div class="footer">
+          <p style={{marginTop:5}}>Design and powered by Trabeya</p>
+        </div>
+      </React.Fragment>
+      // {/* </div> */}
     );
   }
 }

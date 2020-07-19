@@ -10,7 +10,7 @@ const store = configureStore();
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
+      <div className="pageWrapper">
         <Router />
       </div>
     </Provider>

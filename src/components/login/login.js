@@ -24,67 +24,95 @@ class Login extends Component {
   render() {
     return (
       <header className="App-header">
-        <div className="container">
-          <header>
-            <h2>Welcome to Springboard</h2>
-            <div className="header1"> Please Login to continue</div>
-          </header>
-          <div className="label">
-            <div className="username1">
-              <FontAwesomeIcon
-                icon={faUser}
-                style={{
-                  color: "gray",
-                  justifyContent: "center",
-                  marginLeft: 25,
-                  marginRight: 25,
-                }}
-              />
-              <input
-                type="text"
-                placeholder="Username"
-                className="form-control1"
-                name="uname"
-                value={this.state.email}
-                required
-              />
-            </div>
-            <div className="username1">
-              <FontAwesomeIcon
-                icon={faLock}
-                style={{
-                  color: "gray",
-                  justifyContent: "center",
-                  marginLeft: 25,
-                  marginRight: 25,
-                }}
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                name="psw"
-                className="form-control1"
-                value={this.state.password}
-                required
-              />
-            </div>
-            <div>
-              <div className="check">
-                <label>
-                  <input type="checkbox" checked="checked" name="remember" />
-                  Remember me
-                </label>
+        <div className="container containerFull contentLayoutCenter">
+          <div className="contentLayout">
+            <header>
+              <h2>Welcome to Springboard</h2>
+              <div className="header1"> Please Login to continue</div>
+            </header>
+
+            <div className="loginWrapper">
+              <div className="fieldItemWrapper">
+                <div className="fieldItem">
+                  <FontAwesomeIcon
+                    icon={faUser}
+                    style={{
+                      color: "gray",
+                      position: "absolute",
+                      zIndex: 999,
+                      left: 0,
+                      top: 0,
+                      bottom: 0,
+                      height: "100%",
+                      paddingLeft: 15,
+                    }}
+                  />
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    className="inputWrapper inputRad"
+                    name="uname"
+                    value={this.state.email}
+                    required
+                  />
+                </div>
               </div>
-              <div className="forget">
-                <a href="#">Forgot password?</a>
+
+              <div className="fieldItemWrapper">
+                <div className="fieldItem">
+                  <FontAwesomeIcon
+                    icon={faLock}
+                    style={{
+                      color: "gray",
+                      position: "absolute",
+                      zIndex: 999,
+                      left: 0,
+                      top: 0,
+                      bottom: 0,
+                      height: "100%",
+                      paddingLeft: 15,
+                    }}
+                  />
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    name="psw"
+                    className="inputWrapper inputRad"
+                    value={this.state.password}
+                    required
+                  />
+                </div>
               </div>
-            </div>
-            <div>
-              <button className="button" onClick={this.onClickButton}>
-                Login
-              </button>
+
+              <div className="fieldItemWrapper">
+                <div className="detailsSec">
+                  <div className="checkSec">
+                    <label>
+                      <input
+                        type="checkbox"
+                        checked="checked"
+                        name="remember"
+                      />
+                      Remember me
+                    </label>
+                  </div>
+                  <div className="forgetSec">
+                    <a href="#" className="linkText">
+                      Forgot password?
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="btnWrapper">
+                <button className="button" onClick={this.onClickButton}>
+                  Login
+                </button>
+              </div>
             </div>
           </div>
+        </div>
+        <div class="footer">
+          <p style={{ marginTop: 5 }}>Design and powered by Trabeya</p>
         </div>
       </header>
     );

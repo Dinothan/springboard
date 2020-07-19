@@ -24,13 +24,13 @@
   flex-direction: row;
 }
 .check {
-  margin-top: 15px;
+  /* margin-top: 15px;
   text-align: left;
-  flex-direction: row;
+  flex-direction: row; */
 }
 .forget {
-  margin-top: -20px;
-  text-align: right;
+  /* margin-top: -20px;
+  text-align: right; */
 }
 .label {
   margin-left: 150px;
@@ -63,4 +63,32 @@
   width: 150px;
   color: #51a94b;
   font-size: 20px;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+.linkText {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.containerFull {
+  text-align: center;
+  padding-left: 20px!important;
+}
+
+.loginWrapper {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.detailsSec {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.btnWrapper {
+  padding-top: 20px;
 }

@@ -32,14 +32,15 @@ class router extends Component {
     return (
       <Router>
         {!this.state.Auth ? (
-          <div>
+          // <div>
             <Switch>
               <Route exact path="/login" component={Login} />
               <Redirect to="/login" />
             </Switch>
-          </div>
+          // </div>
         ) : (
-          <div>
+          // <div>
+            <React.Fragment>
             <Nativation />
 
             <Switch>
@@ -47,7 +48,8 @@ class router extends Component {
               <Route exact path="/createuser" component={CreateUser} />
               <Redirect to="/" />
             </Switch>
-          </div>
+            </React.Fragment>
+          // {/* </div> */}
         )}
       </Router>
     );

@@ -1,8 +1,9 @@
 .container {
-  text-align: center;
-  margin-top: -20px;
-  margin-left: 180px;
-  margin-right: 25px;
+  padding-left: 180px;
+  padding-bottom: 20px;
+  padding-top: 60px;
+  padding-right: 20px;
+  min-height: calc(100vh - 80px);
 }
 .header {
   align-items: center;
@@ -10,9 +11,10 @@
   font-size: 18px;
   color: #787878;
 }
-.h2 {
-  margin-top: 150px;
+.h2 h2 {
   color: #787878;
+  margin: 0;
+  padding-bottom: 15px;
 }
 /* 
   .App-header {
@@ -79,10 +81,13 @@
   width: 150px;
   background-color: #51a94b;
   color: white;
-  font-size: 20px;
-  margin-right: 100px;
+  font-size: 17px;
+  border: none !important;
+  font-weight: normal;
   margin-top: 20px;
+  cursor: pointer;
 }
+
 .userRole {
   text-align: left;
   color: #787878;
@@ -110,6 +115,113 @@
   height: 50px;
 }
 
+.pageTitle {
+  padding: 20px;
+}
+
+.sub-text {
+  font-size: 18px;
+}
+
+.contentLayoutCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contentWrapper {
+  width: 100%;
+}
+
+.noMg {
+  margin-bottom: 0px;
+}
+
+.contentLayout {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 900px;
+}
+
+.fieldRow {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.fieldCol {
+  width: 50%;
+}
+
+.fieldColFull {
+  width: 100%;
+}
+.fieldColSp {
+  width: 2%;
+}
+
+.fieldItemWrapper {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.fieldItem {
+  position: relative;
+  width: 100%;
+}
+
+.fielSep {
+  padding-top: 15px;
+}
+
+.inputWrapper {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 10px;
+  padding-left: 40px;
+  width: calc(100% - 50px);
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.errorField {
+  outline: 2px solid red;
+}
+
+.inputRad {
+  border-radius: 4px;
+}
+
+.inputLgWrapper {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: calc(100% - 30px);
+  border: 1px solid #afe0f9;
+}
+
+.fieldLabel {
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.formBg {
+  background-color: #f9fcfe;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.fieldBg {
+  background-color: #f9fcfe;
+}
+
+.selectWrapper {
+  width: 100%;
+}
+
 @media screen and (max-width: 600px) {
   .inputField {
     /* display: flex; */
@@ -120,12 +232,12 @@
     margin-left: 50px;
     margin-right: 50px;
   }
-  .container {
+  /* .container {
     text-align: center;
     margin-top: -20px;
     margin-left: 25px;
     margin-right: 25px;
-  }
+  } */
   .roles {
     border: 3px solid rgb(72, 173, 204);
     width: 350px;
@@ -134,19 +246,31 @@
     display: flex;
     flex-direction: column;
   }
-  .createbutton {
-    height: 50px;
-    width: 150px;
-    background-color: #51a94b;
-    color: white;
-    font-size: 20px;
-    /* margin-right: 30px; */
-    margin-left: 130px;
-    margin-top: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-left: 20px;
   }
 }
 
 .inputField {
   display: flex;
   flex-direction: row;
+}
+.searchField {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 40px;
+  width: calc(100% - 50px);
+  border: none;
+}
+.subText {
+  color: #787878;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.subText1 {
+  color: #787878;
 }
